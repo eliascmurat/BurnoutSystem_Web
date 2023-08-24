@@ -1,1 +1,275 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  /*Font size*/
+  --fs-tiny: 0.75rem;
+  --fs-base: 1rem;
+  --fs-1: 3rem;
+  --fs-2: 2rem;
+  --fs-3: 1.75rem;
+  --fs-4: 1.5rem;
+
+  /*Default color*/
+  --white: #fafafa;
+  --black: #111111;
+  --purple: #9b59b6;
+  --purple-dark: #8e44ad;
+  --red: #e74c3c;
+  --red-dark: #c0392b;
+  --green: #2ecc71;
+  --green-dark: #27ae60;
+  --blue: #3498db;
+  --blue-dark: #2980b9;
+  --yellow: #f1c40f;
+  --yellow-dark: #f39c12;
+
+  /*Background color*/
+  --background-primary: #111111;
+  --background-secondary: #181818;
+  --background-tertiary: #1E1E1E;
+
+  /*Foreground color*/
+  --foreground-primary: #fafafa;
+  --foreground-secondary: #DBDBDB;
+  --foreground-tertiary: #545454;
+}
+
+/*Reset CSS*/
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background-primary);
+  font-size: var(--fs-base);
+  height: 100%;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--foreground-secondary);
+  display: inline-block;
+  text-decoration: underline;
+  font-size: var(--fs-base);
+  font-weight: 400;
+  transition: .2s;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--foreground-primary);
+}
+
+li {
+  list-style: none;
+}
+
+img, button {
+  display: block;
+}
+
+input,
+textarea,
+button {
+  outline-offset: none;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled,
+button:disabled:hover {
+  background: var(--foreground-tertiary);
+  cursor: not-allowed;
+}
+
+fa-icon {
+  font-size: var(--fs-base);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-tertiary);
+  box-shadow: inset 0 0 10px 10px var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--red-light);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red-dark);
+}
+
+::-moz-selection {
+  color: var(--white);
+  background: var(--red-light);
+}
+
+::selection {
+  color: var(--white);
+  background: var(--red-light);
+}
+
+/*Base style*/
+h1,
+h2,
+h3,
+h4 {
+  display: block;
+  color: var(--foreground-primary);
+}
+
+h1 {
+  color: var(--foreground-primary);
+  font-size: var(--fs-1);
+  font-weight: 900;
+}
+
+h2, h3, h4 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--fs-2);
+}
+
+h3 {
+  font-size: var(--fs-3);
+}
+
+h4 {
+  font-size: var(--fs-4);
+}
+
+p, label {
+  font-size: var(--fs-base);
+  font-weight: 300;
+  color: var(--foreground-secondary);
+}
+
+.tiny-text {
+  font-size: var(--fs-tiny);
+  color: var(--foreground-tertiary);
+}
+
+.logo {
+  color: var(--foreground-primary);
+  font-size: var(--fs-4);
+  font-weight: 400;
+  line-height: 2;
+  text-decoration: none;
+}
+
+.visually-hidden {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-form input.visually-hidden {
+  min-height: 0 !important;
+}
+
+/*Reused style*/
+.container {
+  margin-inline: auto;
+  margin: auto;
+  padding: 0 5px;
+}
+
+.btn {
+  margin: 0;
+  transition: .2s;
+}
+
+.btn-primary,
+.btn-secondary {
+  font-size: var(--fs-tiny);
+  font-weight: 300;
+  letter-spacing: 0.25rem;
+  min-height: 3rem;
+  padding: 0.80rem 1.20rem;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  min-width: 9rem;
+  background: var(--red-light);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--red-dark);
+  color: var(--white);
+}
+
+.btn-secondary {
+  min-width: none;
+  background: var(--background-tertiary);
+  color: var(--foreground-secondary);
+}
+
+.btn-secondary:hover {
+  background: var(--red-light);
+  color: var(--white);
+}
+
+.title {
+  border-left: 5px solid var(--red-light);
+  padding-left: 10px;
+  margin: 0;
+}
+
+/*Responsive*/
+@media (max-width: 650px) {
+  :root {
+    /*Font size's*/
+    --fs-tiny: 0.6rem;
+    --fs-base: 0.8rem;
+    --fs-1: 2rem;
+    --fs-2: 1.8rem;
+    --fs-3: 1.5rem;
+    --fs-4: 1.2rem;
+  }
+}
+
+@media (min-width: 650px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 800px;
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1150px;
+    padding: 0 30px;
+  }
+}
