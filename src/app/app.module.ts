@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HeaderModule } from "./components/header/header.module";
 
 @NgModule({
   declarations: [
@@ -13,7 +12,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    HeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
