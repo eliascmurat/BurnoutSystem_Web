@@ -57,7 +57,7 @@ body {
 a {
   color: var(--foreground-secondary);
   display: inline-block;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: var(--fs-base);
   font-weight: 400;
   transition: .2s;
@@ -111,22 +111,22 @@ fa-icon {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--red-light);
   border-radius: 5px;
+  /*background: var(--red-light);*/
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--red-dark);
+  /*background: var(--red-dark);*/
 }
 
 ::-moz-selection {
   color: var(--white);
-  background: var(--red-light);
+  /*background: var(--red-light);*/
 }
 
 ::selection {
   color: var(--white);
-  background: var(--red-light);
+  /*background: var(--red-light);*/
 }
 
 /*Base style*/
@@ -213,6 +213,7 @@ p, label {
   text-transform: uppercase;
 }
 
+/*
 .btn-primary {
   min-width: 9rem;
   background: var(--red-light);
@@ -229,17 +230,18 @@ p, label {
   background: var(--background-tertiary);
   color: var(--foreground-secondary);
 }
+*/
 
-.btn-secondary:hover {
+/*.btn-secondary:hover {
   background: var(--red-light);
   color: var(--white);
-}
+}*/
 
-.title {
+/*.title {
   border-left: 5px solid var(--red-light);
   padding-left: 10px;
   margin: 0;
-}
+}*/
 
 /*Responsive*/
 @media (max-width: 650px) {
