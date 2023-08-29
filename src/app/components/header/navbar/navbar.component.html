@@ -1,1 +1,18 @@
-<p>navbar works!</p>
+<nav class="navbar">
+  <div class="logo">Burnout System</div>
+  <ul class="nav-links" [ngClass]="{'active': isMenuOpen}">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Press Release</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="burger-menu" id="burger-menu" (click)="toggleNavbarMobile()">
+    <button *ngIf="isMenuOpen; else burgerMenu" aria-label="button open navigation menu">
+      <fa-icon [icon]="faXmark"></fa-icon>
+    </button>
+    <ng-template #burgerMenu>
+      <button aria-label="button close navigation menu">
+        <fa-icon [icon]="faBars"></fa-icon>
+      </button>
+    </ng-template>
+  </div>
+</nav>
