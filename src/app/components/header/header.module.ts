@@ -4,6 +4,7 @@ import { HeaderComponent } from './header.component';
 import { BannerComponent } from "./banner/banner.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
   ],
   imports: [
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule
   ]
 })
 export class HeaderModule { }

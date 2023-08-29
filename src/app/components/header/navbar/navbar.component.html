@@ -1,9 +1,9 @@
 <nav class="navbar">
   <div class="logo">Burnout System</div>
   <ul class="nav-links" [ngClass]="{'active': isMenuOpen}">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">Press Release</a></li>
-    <li><a href="#">Contact</a></li>
+    <li><a [routerLink]="['/home']" (click)="closeNavbarMobile()">Home</a></li>
+    <li><a [routerLink]="['/press-release']" (click)="closeNavbarMobile()">Press Release</a></li>
+    <li><a [routerLink]="['/contact']" (click)="closeNavbarMobile()">Contact</a></li>
   </ul>
   <div class="burger-menu" id="burger-menu" (click)="toggleNavbarMobile()">
     <button *ngIf="isMenuOpen; else burgerMenu" aria-label="button open navigation menu">
