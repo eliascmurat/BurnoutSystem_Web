@@ -37,7 +37,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Prompt', sans-serif;
 }
 
 html {
@@ -79,7 +79,7 @@ img, button {
 input,
 textarea,
 button {
-  outline-offset: none;
+  outline-offset: unset;
 }
 
 button {
@@ -140,6 +140,7 @@ h4 {
 
 h1 {
   color: var(--foreground-primary);
+  font-family: 'Black Ops One', cursive;
   font-size: var(--fs-1);
   font-weight: 900;
 }
@@ -213,35 +214,33 @@ p, label {
   text-transform: uppercase;
 }
 
-/*
 .btn-primary {
   min-width: 9rem;
-  background: var(--red-light);
+  background: var(--purple);
   color: var(--white);
 }
 
 .btn-primary:hover {
-  background: var(--red-dark);
+  background: var(--purple-dark);
   color: var(--white);
 }
 
 .btn-secondary {
-  min-width: none;
+  min-width: unset;
   background: var(--background-tertiary);
   color: var(--foreground-secondary);
 }
-*/
 
-/*.btn-secondary:hover {
-  background: var(--red-light);
+.btn-secondary:hover {
+  background: var(--purple);
   color: var(--white);
-}*/
+}
 
-/*.title {
-  border-left: 5px solid var(--red-light);
+.title {
+  border-left: 5px solid var(--white);
   padding-left: 10px;
   margin: 0;
-}*/
+}
 
 /*Responsive*/
 @media (max-width: 650px) {
