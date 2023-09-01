@@ -10,6 +10,7 @@ export class NavbarComponent {
 
   faBars = faBars;
   faXmark = faXmark;
+
   isMenuOpen: boolean = false;
 
   toggleNavbarMobile() {
