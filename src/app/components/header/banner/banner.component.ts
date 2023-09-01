@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faComputerMouse } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-banner',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent {
-
+  faComputerMouse = faComputerMouse;
 }

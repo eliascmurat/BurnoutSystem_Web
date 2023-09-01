@@ -1,1 +1,14 @@
-<p>banner works!</p>
+<section class="banner">
+  <div class="banner-content">
+    <div class="stack" style="--stacks: 3;">
+      <h1 style="--index: 0;">BURNOUT SYSTEM</h1>
+      <h1 style="--index: 1;">BURNOUT SYSTEM</h1>
+      <h1 style="--index: 2;">BURNOUT SYSTEM</h1>
+    </div>
+    <a [routerLink]="['/home']" fragment="about">
+      <p>Clique para ver mais</p>
+      <fa-icon [icon]="faComputerMouse"></fa-icon>
+    </a>
+  </div>
+</section>
+
