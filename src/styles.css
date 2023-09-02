@@ -193,6 +193,27 @@ p, label {
 }
 
 /*Reused style*/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section .s50 {
+  flex: 1;
+  padding: 20px;
+}
+
 .btn {
   margin: 0;
   transition: .2s;
@@ -237,6 +258,12 @@ p, label {
 }
 
 /*Responsive*/
+@media (max-width: 768px) {
+  .section .s50 {
+    flex-basis: 100%;
+  }
+}
+
 @media (max-width: 650px) {
   :root {
     /*Font size's*/
