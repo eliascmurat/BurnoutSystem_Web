@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { NotFoundRoutingModule } from './not-found-routing.module';
 import { NotFoundComponent } from './not-found.component';
-import {HeaderModule} from "../../components/header/header.module";
-
 
 @NgModule({
   declarations: [
@@ -13,7 +11,6 @@ import {HeaderModule} from "../../components/header/header.module";
     imports: [
         CommonModule,
         NotFoundRoutingModule,
-        HeaderModule
     ]
 })
 export class NotFoundModule { }

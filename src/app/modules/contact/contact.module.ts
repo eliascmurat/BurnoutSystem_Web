@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact.component';
-import {HeaderModule} from "../../components/header/header.module";
 
 @NgModule({
   declarations: [
@@ -12,7 +11,6 @@ import {HeaderModule} from "../../components/header/header.module";
     imports: [
         CommonModule,
         ContactRoutingModule,
-        HeaderModule
     ]
 })
 export class ContactModule { }
