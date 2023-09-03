@@ -1,0 +1,10 @@
+<div class="slideshow-container">
+  <div *ngFor="let image of images; let i = index" class="slide" [ngClass]="{'active': currentIndex === i}">
+    <img [src]="image.src" [alt]="image.alt" class="centered-image">
+  </div>
+
+  <div class="btns">
+    <a class="prev" (click)="previousSlide()">&#10094;</a>
+    <a class="next" (click)="nextSlide()">&#10095;</a>
+  </div>
+</div>
