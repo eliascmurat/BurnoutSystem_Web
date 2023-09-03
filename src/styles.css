@@ -54,20 +54,6 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  color: var(--foreground-secondary);
-  display: inline-block;
-  text-decoration: none;
-  font-size: var(--fs-base);
-  font-weight: 400;
-  transition: .2s;
-  cursor: pointer;
-}
-
-a:hover {
-  color: var(--foreground-primary);
-}
-
 li {
   list-style: none;
 }
