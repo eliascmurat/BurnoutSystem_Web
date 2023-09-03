@@ -27,6 +27,7 @@
 .btns {
   position: relative;
   padding: 20px;
+  margin: 10px 0;
   gap: 20px;
   width: 100%;
   display: flex;
@@ -43,7 +44,7 @@
   margin: -15px 0;
   color: var(--foreground-secondary);
   text-align: center;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.6);
   font-size: var(--fs-base);
   transition: 0.5s ease;
   user-select: none;
@@ -56,5 +57,5 @@
 
 .prev:hover, .next:hover {
   color: var(--foreground-primary);
-  background-color: rgba(0,0,0,0.9);
+  background-color: var(--purple);
 }

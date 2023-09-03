@@ -33,3 +33,9 @@
   color: var(--foreground-secondary);
   font-weight: normal;
 }
+
+@media (max-width: 768px) {
+  .home .s50 {
+    padding: 10px 0;
+  }
+}

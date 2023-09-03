@@ -199,7 +199,7 @@ p, label {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 0 100px;
+  padding: 0 6rem;
 }
 
 .s50 {
@@ -251,12 +251,6 @@ p, label {
 }
 
 /*Responsive*/
-@media (max-width: 768px) {
-  .s50 {
-    flex-basis: 100%;
-  }
-}
-
 @media (max-width: 650px) {
   :root {
     /*Font size's*/
@@ -266,5 +260,25 @@ p, label {
     --fs-2: 1.8rem;
     --fs-3: 1.5rem;
     --fs-4: 1.2rem;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .s50 {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
   }
 }
