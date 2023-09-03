@@ -1,0 +1,42 @@
+.press-release {
+  padding: 50px 100px;
+}
+
+.press-release h3 {
+  margin: 3rem 0 0.7rem 0;
+}
+
+.press-release p.subtitle {
+  padding-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.press-release p {
+  padding: 0.3rem 0;
+  text-align: justify;
+}
+
+.press-release a {
+  color: var(--blue);
+}
+
+.press-release a:hover {
+  color: var(--blue-dark);
+}
+
+.press-release a:focus,
+.press-release a:visited {
+  color: var(--purple-dark);
+}
+
+.press-release li {
+  margin-left: 25px;
+  padding: 0.3rem 0;
+  list-style-type: square;
+  color: var(--foreground-secondary);
+  font-weight: normal;
+}
+
+.container {
+  flex-direction: column;
+}
