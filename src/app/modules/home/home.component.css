@@ -39,4 +39,15 @@
   .home .s50 {
     padding: 10px 0;
   }
+
+  .home .container:nth-child(2) {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.75rem;
+  }
+
+  br {
+    display: none;
+  }
 }
