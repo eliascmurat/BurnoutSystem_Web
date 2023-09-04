@@ -1,6 +1,6 @@
 .home {
   background-image: linear-gradient(#000, var(--background-primary), var(--background-secondary));
-  padding: 70px 0;
+  padding: 70px 0 0 0;
 }
 
 .home iframe {
@@ -17,6 +17,7 @@
 
 .home h2 {
   margin-bottom: 0.7rem;
+  font-family: 'Black Ops One', cursive;
 }
 
 .home p {
@@ -35,8 +36,77 @@
   font-weight: normal;
 }
 
+.home #made-with {
+  display: block;
+  text-align: center;
+  background: var(--background-primary);
+  padding: 30px 70px;
+}
+
+.home #made-with .wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.home #made-with .wrapper .sub-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home #made-with h3,
+.home #made-with h4 {
+  padding-top: 1.3rem;
+}
+
+.home #made-with h4 {
+  color: var(--foreground-secondary);
+}
+
+.home #made-with img {
+  width: 120px;
+  height: 120px;
+  background: var(--background-tertiary);
+  padding: 24px;
+  border-radius: 60px;
+}
+
+.home #team {
+  background: var(--background-tertiary);
+  padding: 30px 70px;
+}
+
+.home #team p {
+  width: 100%;
+  text-align: center;
+}
+
+.home #team h4 {
+  text-align: center;
+}
+
+.home #team .dev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.home #team .dev p {
+  text-align: center;
+  max-width: 600px;
+}
+
+.home #team img {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  margin-top: 30px;
+}
+
 @media (max-width: 768px) {
-  .home .s50 {
+  .home .sub-container {
     padding: 10px 0;
   }
 
