@@ -1,5 +1,6 @@
 footer {
   background: var(--background-tertiary);
+  border-top: 2px solid var(--background-secondary);
   text-align: center;
   padding: 1rem 0;
 }
