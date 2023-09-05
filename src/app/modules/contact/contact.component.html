@@ -2,7 +2,7 @@
   <h2 class="title">Contato</h2>
   <p>Ficou interessado no projeto? Quer bater um papo com a gente? Fique a vontade e nos envie uma mensagem, será um prazer!</p>
   <div class="container">
-    <form action="https://formsubmit.co/islialink@gmail.com" method="POST" name="contactForm" class="contact-form" autocomplete="on" target="_self" ngNoForm>
+    <form action="https://formsubmit.co/4465e824fcbf88d9ca5e4c48cc701945" method="POST" name="contactForm" class="contact-form" autocomplete="on" target="_self" ngNoForm>
       <input type="hidden" name="_next" value="http://localhost/thanks" />
       <input type="hidden" name="_subject" value="[BURNOUT SYSTEM] - Nova mensagem!" />
       <input type="text" name="_honey" style="display: none" tabindex="-1" autocomplete="off" />
@@ -12,7 +12,7 @@
         <label for="name">Nome</label>
         <input type="text" name="name" id="name" placeholder="Seu nome" minlength="2" maxlength="255" required ngModel #name="ngModel" />
 
-        <div *ngIf="name.invalid && (name.dirty || name.touched)">
+        <div class="erros" *ngIf="name.invalid && (name.dirty || name.touched)">
           <span *ngIf="name.errors?.['required']"> Name is required. </span>
 
           <span *ngIf="name.errors?.['minlength'] || name.errors?.['maxlength']">
@@ -25,7 +25,7 @@
         <label for="email">E-mail</label>
         <input type="email" name="email" id="email" placeholder="lorem@ipsum.com" minlength="7" maxlength="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required ngModel #email="ngModel" />
 
-        <div *ngIf="email.invalid && (email.dirty || email.touched)">
+        <div class="erros" *ngIf="email.invalid && (email.dirty || email.touched)">
           <span *ngIf="email.errors?.['required']"> E-mail não pode ser vazio. </span>
 
           <span *ngIf="email.errors?.['pattern']"> E-mail não é válido. </span>
@@ -36,17 +36,19 @@
         <label for="message">Mensagem</label>
         <textarea name="message" id="message" placeholder="Digite aqui sua mensagem..." minlength="2" maxlength="1000" required ngModel #message="ngModel"></textarea>
 
-        <div *ngIf="message.invalid && (message.dirty || message.touched)">
-        <span *ngIf="message.errors?.['required']">
-          Message não pode ser vazia.
-        </span>
-        <span *ngIf="message.errors?.['minlength'] || message.errors?.['maxlength']">
-          A mensagem só pode ter no mínimo 2 caracteres e no máximo 1000.
-        </span>
+        <div class="erros" *ngIf="message.invalid && (message.dirty || message.touched)">
+          <span *ngIf="message.errors?.['required']">
+            Message não pode ser vazia.
+          </span>
+          <span *ngIf="message.errors?.['minlength'] || message.errors?.['maxlength']">
+            A mensagem só pode ter no mínimo 2 caracteres e no máximo 1000.
+          </span>
         </div>
       </div>
 
-      <button type="submit" class="btn btn-primary" aria-label="button send form" [disabled]="name.invalid || email.invalid || message.invalid">Send</button>
+      <button type="submit" class="btn btn-primary" aria-label="button send form" [disabled]="name.invalid || email.invalid || message.invalid" (click)="onSubmit()">Enviar</button>
     </form>
   </div>
 </section>
+
+<app-loader *ngIf="isLoading"></app-loader>

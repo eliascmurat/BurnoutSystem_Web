@@ -58,6 +58,10 @@
   width: 12rem;
 }
 
+.contact-form .erros {
+  text-align: left;
+}
+
 .contact-form span {
   font-weight: 400;
   font-size: var(--fs-tiny);

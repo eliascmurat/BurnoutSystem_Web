@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ContactRoutingModule } from './contact-routing.module';
 import { ContactComponent } from './contact.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { LoaderModule } from "../../components/loader/loader.module";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     CommonModule,
     ContactRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    LoaderModule
   ]
 })
 export class ContactModule { }
