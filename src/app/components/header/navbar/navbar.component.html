@@ -7,9 +7,9 @@
   <ul class="nav-links" [ngClass]="{'active': isMenuOpen}">
     <li><a [routerLink]="['/home']" (click)="closeNavbarMobile()">Home</a></li>
     <li><span>&#8226;</span></li>
-    <li><a [routerLink]="['/press-release']" (click)="closeNavbarMobile()">Press Release</a></li>
+    <li><a [routerLink]="['/press-release']" fragment="announcement" (click)="closeNavbarMobile()">Press Release</a></li>
     <li><span>&#8226;</span></li>
-    <li><a [routerLink]="['/contact']" (click)="closeNavbarMobile()">Contact</a></li>
+    <li><a [routerLink]="['/contact']" fragment="form" (click)="closeNavbarMobile()">Contact</a></li>
   </ul>
   <div class="burger-menu" id="burger-menu" (click)="toggleNavbarMobile()">
     <button *ngIf="isMenuOpen; else burgerMenu" aria-label="button open navigation menu">
