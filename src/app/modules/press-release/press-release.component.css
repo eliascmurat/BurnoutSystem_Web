@@ -40,3 +40,9 @@
 .container {
   flex-direction: column;
 }
+
+@media (max-width: 768px) {
+  .press-release {
+    padding: 30px 15px;
+  }
+}
