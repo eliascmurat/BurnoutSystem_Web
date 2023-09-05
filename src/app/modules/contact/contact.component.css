@@ -1,4 +1,4 @@
-#contact {
+#form {
   background: var(--background-secondary);
   padding: 3rem 0;
   text-align: center;
@@ -18,7 +18,7 @@
   width: 600px;
 }
 
-#contact p {
+#form p {
   max-width: 700px;
   text-align: center;
   margin: 1rem auto;
@@ -70,7 +70,7 @@
 }
 
 @media (min-width: 650px) {
-  #contact {
+  #form {
     padding: 2rem 2.5rem;
   }
 
@@ -80,7 +80,7 @@
 }
 
 @media (min-width: 500px) {
-  #contact {
+  #form {
     padding: 2rem 1rem;
   }
 
