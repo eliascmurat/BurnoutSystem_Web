@@ -146,6 +146,29 @@
     margin-top: 1.75rem;
   }
 
+  .home #made-with img {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    padding: 16px;
+  }
+
+  .home #team {
+    padding: 15px;
+  }
+
+  .home #team .container {
+    padding: 0;
+  }
+
+  .home #team .dev {
+    margin-bottom: 0;
+  }
+
+  .home #team p {
+    max-width: 100%;
+  }
+
   br {
     display: none;
   }
