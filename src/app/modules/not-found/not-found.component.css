@@ -1,0 +1,97 @@
+.not-found {
+  height: calc(100vh - 7vh);
+  background-image: url("/assets/not-found.png");
+  background-size: cover;
+  background-position: center;
+  padding: calc(50vh - 13.3rem) 5rem;
+  text-align: center;
+}
+
+.not-found h1 {
+  font-size: var(--fs-1);
+}
+
+.not-found p {
+  padding: 1rem 0 2rem 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.not-found a {
+  text-align: center;
+  text-decoration: none;
+  min-width: 10rem;
+  font-weight: 300;
+}
+
+.not-found a.btn-primary {
+  padding: 1rem 1.2rem;
+}
+
+.not-found .stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: var(--foreground-primary);
+  margin-top: 2rem;
+}
+
+.not-found .stack h1 {
+  font-weight: bold;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  font-size: calc(var(--fs-1) + 10px);
+  --stack-height: calc(100% / var(--stacks) - 1px);
+  --inverse-index: calc(calc(var(--stacks) - 1) - var(--index));
+  --clip-top: calc(var(--stack-height) * var(--index));
+  --clip-bottom: calc(var(--stack-height) * var(--inverse-index));
+  clip-path: inset(var(--clip-top) 0 var(--clip-bottom) 0);
+  animation: stack 340ms cubic-bezier(.46,.29,0,1.24) 1 backwards calc(var(--index) * 120ms), glitch 2s ease infinite 2s alternate-reverse;
+}
+
+.not-found .stack h1:nth-child(odd) { --glitch-translate: 8px; }
+.not-found .stack h1:nth-child(even) { --glitch-translate: -8px; }
+
+@keyframes stack {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+    text-shadow: -2px 3px 0 var(--red), 2px -3px 0 var(--blue);
+  }
+  60% {
+    opacity: 0.5;
+    transform: translateX(50%);
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+    text-shadow: 2px -3px 0 var(--red), -2px 3px 0 var(--blue);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: -2px 3px 0 var(--red), 2px -3px 0 var(--blue);
+    transform: translate(var(--glitch-translate));
+  }
+  2% {
+    text-shadow: 2px -3px 0 var(--red), -2px 3px 0 var(--blue);
+  }
+  4%, 100% {  text-shadow: none; transform: none; }
+}
+
+@media (max-width: 900px) {
+  .not-found {
+    min-height: calc(100vh - 24.2vh);
+    padding: calc(50vh - 33vh) 1rem calc(50vh - 15rem) 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .not-found {
+    min-height: calc(100vh - 23.5vh);
+    padding: calc(50vh - 15rem) 1rem 5rem 1rem;
+  }
+}
