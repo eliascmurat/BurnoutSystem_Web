@@ -1,0 +1,46 @@
+.thanks {
+  height: calc(100vh - 7vh);
+  background-image: var(--background-secondary);
+  text-align: center;
+  padding: calc(50vh - 13.3rem) 5rem;
+}
+
+.thanks p {
+  padding: 1rem 0 2rem 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.thanks a {
+  text-align: center;
+  text-decoration: none;
+  min-width: 10rem;
+  font-weight: 300;
+}
+
+.thanks a.btn-primary {
+  padding: 1rem 1.2rem;
+}
+
+fa-icon {
+  font-size: 8rem;
+  color: var(--green);
+}
+
+@media (max-width: 900px) {
+  .thanks {
+    min-height: calc(100vh - 24.2vh);
+    padding: calc(50vh - 45vh) 1rem calc(50vh - 15rem) 1rem;
+  }
+
+  fa-icon {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .thanks {
+    min-height: calc(100vh - 23.5vh);
+    padding: calc(50vh - 18rem) 1rem 5rem 1rem;
+  }
+}
